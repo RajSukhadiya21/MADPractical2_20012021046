@@ -14,16 +14,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         mycl=findViewById(R.id.mycl)
-        Log.i(TAG, "onCreate function called: ")
-        Toast.makeText(this, "onCreate function called: ", Toast.LENGTH_SHORT).show()
-        Snackbar.make(mycl,"onCreate function called:",Snackbar.LENGTH_LONG).show()
-
+        Log.i(TAG, "onCreate: function called")
+        Toast.makeText(this, "onCreate: function called", Toast.LENGTH_SHORT).show()
+        Snackbar.make(mycl,"onCreate: function called",Snackbar.LENGTH_LONG).show()
     }
     override fun onStart() {
         super.onStart()
-        Log.i(TAG, "onStart function called: ")
-        Toast.makeText(this, "onStart function called: ", Toast.LENGTH_SHORT).show()
-        Snackbar.make(mycl,"onStart function called:",Snackbar.LENGTH_LONG).show()
+        Log.i(TAG, "onStart: function called")
+        Toast.makeText(this, "onStart: function called", Toast.LENGTH_SHORT).show()
+        Snackbar.make(mycl,"onStart: function called",Snackbar.LENGTH_LONG).show()
     }
 
     override fun onResume() {
@@ -33,6 +32,13 @@ class MainActivity : AppCompatActivity() {
         Snackbar.make(mycl,"onResume function called:",Snackbar.LENGTH_LONG).show()
     }
 
+    override fun onStop() {
+        super.onStop()
+        Log.i(TAG, "onStop function called: ")
+        Toast.makeText(this, "onStop function called: ", Toast.LENGTH_SHORT).show()
+        Snackbar.make(mycl,"onStop function called:",Snackbar.LENGTH_LONG).show()
+    }
+
     override fun onRestart() {
         super.onRestart()
         Log.i(TAG, "onRestart function called: ")
@@ -40,12 +46,6 @@ class MainActivity : AppCompatActivity() {
         Snackbar.make(mycl,"onRestart function called:",Snackbar.LENGTH_LONG).show()
     }
 
-    override fun onStop() {
-        super.onStop()
-        Log.i(TAG, "onStop function called: ")
-        Toast.makeText(this, "onStop function called: ", Toast.LENGTH_SHORT).show()
-        Snackbar.make(mycl,"onStop function called:",Snackbar.LENGTH_LONG).show()
-    }
 
     override fun onPause() {
         super.onPause()
